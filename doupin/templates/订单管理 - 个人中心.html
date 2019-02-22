@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<!-- saved from url=(0113)https://market.douban.com/people/orders/?utm_campaign=douban_top_nav_my_order&utm_source=douban&utm_medium=pc_web -->
+<html lang="zh-CN" class="ua-windows ua-webkit    "><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script src="./订单管理 - 个人中心_files/get_token_with_ts" async=""></script><script src="./订单管理 - 个人中心_files/num" async=""></script><script src="./订单管理 - 个人中心_files/num(1)" async=""></script>
+  
+  
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="renderer" content="webkit">
+<meta name="baidu-site-verification" content="BI15donNJv">
+<meta name="google-site-verification" content="EmspOtssvVSHejerIoFN2L9tf9mW8V8Nu80B5819yNs">
+
+  
+  
+  <meta name="keywords" content="豆瓣豆品">
+  <meta name="description" content="豆瓣生活美学物品">
+
+  
+  <meta property="og:title" content="豆瓣豆品">
+  <meta property="og:url" content="https://market.douban.com">
+  <meta property="og:image" content="https://img3.doubanio.com/f/market/d916e206bc5b545384896b7288b52867bdbc389e/pics/logos/logo-square.jpg">
+  <meta property="og:site_name" content="豆瓣豆品">
+  <meta property="og:description" content="豆瓣生活美学物品">
+
+  <title>订单管理 - 个人中心</title>
+  
+  
+
+
+
+<link rel="shortcut icon" href="https://img3.doubanio.com/favicon.ico" type="image/x-icon">
+<link rel="stylesheet" href="./订单管理 - 个人中心_files/common.css">
+<link rel="stylesheet" href="./订单管理 - 个人中心_files/misc.css">
+<link rel="stylesheet" href="./订单管理 - 个人中心_files/vendors.css">
+<script type="text/javascript" async="" src="./订单管理 - 个人中心_files/ec.js.下载"></script><script async="" src="./订单管理 - 个人中心_files/gtm.js.下载"></script><script async="" src="./订单管理 - 个人中心_files/analytics.js.下载"></script><script type="text/javascript" defer="" async="" src="./订单管理 - 个人中心_files/piwik.js.下载"></script><script type="text/javascript" async="" src="./订单管理 - 个人中心_files/ma.v2.last.release.js.下载"></script><script>var _USER_ID = "192011690"</script>
+
+
+  
+  <script src="./订单管理 - 个人中心_files/entrance.js.下载" id="zhichiScript" class="zhichiSobotCustomBtn"></script>
+
+<script type="text/javascript">
+  // 初始化智齿咨询组件实例
+  var zhiManager = (getzhiSDKInstance());
+  // 格式为 0-9 a-f 之间的六位有效字符 不用加 #
+  zhiManager.set('color','73ad73');
+  // true 自定义咨询按钮 废弃系统默认按钮
+  zhiManager.set('customBtn', 'true');
+  // 当为左下时，则水平距离左边100px。当为右下时，则水平距离右边100px
+  zhiManager.set('customMargin', 100);
+  // 设置用户信息
+  zhiManager.set('partnerId', "192011690");
+  zhiManager.set('userinfo', {
+    realname: "灵魂"  //昵称
+  });
+
+  var sobotUnreadMessageNumber = 0;
+  // 自定义按钮 通过该方法获取客服发送的未读内容 & 消息数
+  zhiManager.on("receivemessage", function(res) {
+    var messages = res.data;
+    if (messages && messages.length > 0) {
+      sobotUnreadMessageNumber += messages.length;
+    }
+    if (sobotUnreadMessageNumber > 0) {
+      $.each(document.getElementsByClassName('market-sobot'), function(index, value) {
+        value.className = 'mui-icon message-new market-sobot'
+      });
+      // react
+      window.sobotNewMessagesListener();
+    } else {
+      $.each(document.getElementsByClassName('market-sobot'), function(index, value) {
+        value.className = 'mui-icon message market-sobot'
+      });
+      // react
+      window.sobotNewMessagesListener();
+    }
+  });
+
+  function sobotNewMessagesListener() {
+    // empty
+    // implement in react
+    // refer to mobile/static_resource/common/components/sobot/index.jsx
+  };
+
+  function openSobotChat() {
+    var sobotStatus = window.zhiManager.getStatus();
+    if (sobotStatus === 'expand') {
+      window.zhiManager.collapse();
+    } else {
+      window.zhiManager.expand();
+      sobotUnreadMessageNumber = 0;
+      $.each(document.getElementsByClassName('market-sobot'), function(index, value) {
+        value.className = 'mui-icon message market-sobot'
+      });
+      window.sobotNewMessagesListener();
+    }
+  }
+</script>
+
+<!-- 智齿只能识别第一个指定className的元素 -->
+<style></style></head><body class="wide"><a class="zhichiSobotCustomBtn" style="display: none"></a>
+
+  <link rel="stylesheet" href="./订单管理 - 个人中心_files/orders.css">
+
+  
+  <!-- COLLECTED CSS -->
+  
+  <script>
+    window._MARKET_ENV = "prod"
+    if (window._EVN_MODE !== 'prod') {
+      window._MARKET_API_BASE_URI = window.location.origin + '/api/'
+    }
+  </script>
+
+
+
+
+
+  
+  
+  
+
+
+
+
+
+    <link href="./订单管理 - 个人中心_files/bundle.css" rel="stylesheet" type="text/css">
+
+
+
+<div id="db-global-nav" class="global-nav">
+  <div class="bd">
+    
+<div class="top-nav-info">
+  <ul>
+    <li>
+    <a id="top-nav-doumail-link" href="https://www.douban.com/doumail/">豆邮</a>
+    </li>
+    <li class="nav-user-account">
+      <a target="_blank" href="https://accounts.douban.com/passport/setting/" class="bn-more">
+        <span>灵魂的帐号</span><span class="arrow"></span>
+      </a>
+      <div class="more-items">
+        <table cellpadding="0" cellspacing="0">
+          <tbody>
+            <tr>
+              <td>
+                <a href="https://www.douban.com/mine/">个人主页</a>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <a target="_blank" href="https://www.douban.com/mine/orders/">我的订单</a>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <a target="_blank" href="https://www.douban.com/mine/wallet/">我的钱包</a>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <a target="_blank" href="https://accounts.douban.com/passport/setting/">帐号管理</a>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <a href="https://www.douban.com/accounts/logout?source=main&amp;ck=KKcH">退出</a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </li>
+  </ul>
+</div>
+
+  <div class="top-nav-reminder">
+    <a href="https://www.douban.com/notification/" class="lnk-remind">提醒</a>
+    <div id="top-nav-notimenu" class="more-items">
+      <div class="bd">
+        <p>加载中...</p>
+      </div>
+    </div>
+  </div>
+
+    <div class="top-nav-doubanapp">
+  <a href="https://www.douban.com/doubanapp/app?channel=top-nav" class="lnk-doubanapp">下载豆瓣客户端</a>
+  <div id="doubanapp-tip">
+    <a href="https://www.douban.com/doubanapp/app?channel=qipao" class="tip-link">豆瓣 <span class="version">6.0</span> 全新发布</a>
+    <a href="javascript: void 0;" class="tip-close">×</a>
+  </div>
+  <div id="top-nav-appintro" class="more-items">
+    <p class="appintro-title">豆瓣</p>
+    <p class="qrcode">扫码直接下载</p>
+    <div class="download">
+      <a href="https://www.douban.com/doubanapp/redirect?channel=top-nav&amp;direct_dl=1&amp;download=iOS">iPhone</a>
+      <span>·</span>
+      <a href="https://www.douban.com/doubanapp/redirect?channel=top-nav&amp;direct_dl=1&amp;download=Android" class="download-android">Android</a>
+    </div>
+  </div>
+</div>
+
+    
+
+
+<div class="global-nav-items">
+  <ul>
+    <li class="on">
+      <a href="https://www.douban.com/" data-moreurl-dict="{&quot;from&quot;:&quot;top-nav-click-main&quot;,&quot;uid&quot;:&quot;192011690&quot;}">豆瓣</a>
+    </li>
+    <li class="">
+      <a href="https://book.douban.com/" target="_blank" data-moreurl-dict="{&quot;from&quot;:&quot;top-nav-click-book&quot;,&quot;uid&quot;:&quot;192011690&quot;}">读书</a>
+    </li>
+    <li class="">
+      <a href="https://movie.douban.com/" target="_blank" data-moreurl-dict="{&quot;from&quot;:&quot;top-nav-click-movie&quot;,&quot;uid&quot;:&quot;192011690&quot;}">电影</a>
+    </li>
+    <li class="">
+      <a href="https://music.douban.com/" target="_blank" data-moreurl-dict="{&quot;from&quot;:&quot;top-nav-click-music&quot;,&quot;uid&quot;:&quot;192011690&quot;}">音乐</a>
+    </li>
+    <li class="">
+      <a href="https://www.douban.com/location" target="_blank" data-moreurl-dict="{&quot;from&quot;:&quot;top-nav-click-location&quot;,&quot;uid&quot;:&quot;192011690&quot;}">同城</a>
+    </li>
+    <li class="">
+      <a href="https://www.douban.com/group" target="_blank" data-moreurl-dict="{&quot;from&quot;:&quot;top-nav-click-group&quot;,&quot;uid&quot;:&quot;192011690&quot;}">小组</a>
+    </li>
+    <li class="">
+      <a href="https://read.douban.com/?dcs=top-nav&amp;dcm=douban" target="_blank" data-moreurl-dict="{&quot;from&quot;:&quot;top-nav-click-read&quot;,&quot;uid&quot;:&quot;192011690&quot;}">阅读</a>
+    </li>
+    <li class="">
+      <a href="https://douban.fm/?from_=shire_top_nav" target="_blank" data-moreurl-dict="{&quot;from&quot;:&quot;top-nav-click-fm&quot;,&quot;uid&quot;:&quot;192011690&quot;}">FM</a>
+    </li>
+    <li class="">
+      <a href="https://time.douban.com/?dt_time_source=douban-web_top_nav" target="_blank" data-moreurl-dict="{&quot;from&quot;:&quot;top-nav-click-time&quot;,&quot;uid&quot;:&quot;192011690&quot;}">时间</a>
+    </li>
+    <li class="">
+      <a href="https://market.douban.com/?utm_campaign=douban_top_nav&amp;utm_source=douban&amp;utm_medium=pc_web" target="_blank" data-moreurl-dict="{&quot;from&quot;:&quot;top-nav-click-market&quot;,&quot;uid&quot;:&quot;192011690&quot;}">豆品</a>
+    </li>
+    <li>
+      <a href="https://market.douban.com/people/orders/?utm_campaign=douban_top_nav_my_order&amp;utm_source=douban&amp;utm_medium=pc_web#more" class="bn-more"><span>更多</span></a>
+      <div class="more-items">
+        <table cellpadding="0" cellspacing="0">
+          <tbody>
+            <tr>
+              <td>
+                <a href="https://ypy.douban.com/" target="_blank" data-moreurl-dict="{&quot;from&quot;:&quot;top-nav-click-ypy&quot;,&quot;uid&quot;:&quot;192011690&quot;}">豆瓣摄影</a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </li>
+  </ul>
+</div>
+
+  </div>
+</div>
+<script>
+  ;window._GLOBAL_NAV = {
+    USER_ID: "192011690",
+    UPLOAD_AUTH_TOKEN: "192011690:01259b5defff189b2421bc75383748acaed1b775",
+    SSE_TOKEN: "10422b2c8c7777e958ad8708126b4924b4506168",
+    SSE_TIMESTAMP: "1550715965",
+    DOUBAN_URL: "https://www.douban.com",
+    N_NEW_NOTIS: 0,
+    N_NEW_DOUMAIL: 0
+  };
+</script>
+
+
+
+    <script src="./订单管理 - 个人中心_files/bundle.js.下载" defer="defer"></script>
+
+
+
+
+
+
+  <div id="market-main">
+    
+  
+  
+
+<header id="market-header" class="market-global-header">
+  <div class="header-inner">
+    <div class="logo">
+  <a class="market-logo" href="https://market.douban.com/">豆瓣豆品</a>
+</div>
+
+    
+
+
+
+<div class="market-user">
+  <div class="user-people">
+    <div class="user-pic" id="header-user-pic">
+      <img src="./订单管理 - 个人中心_files/user_normal.jpg">
+      <span>个人中心</span>
+    </div>
+    <ul class="nav-list">
+      <li class="nav-item">
+        <a href="https://market.douban.com/people">豆品／纸书订单</a>
+      </li>
+      <li class="nav-item">
+        <a href="https://market.douban.com/people/coupons">我的优惠券</a>
+      </li>
+      <li class="nav-item">
+        <a href="https://market.douban.com/people/address">收货地址管理</a>
+      </li>
+    </ul>
+  </div>
+
+  <a class="user-cart" id="header-user-cart" href="https://market.douban.com/cart?biz_type=market">
+    <i class="mui-icon cart-bold"></i>
+    <b class="cart-count" id="cart-count">0</b>
+  </a>
+</div>
+
+  </div>
+</header>
+
+  
+  <div class="market-wrapper">
+    
+<div class="orders-navs">
+  <a href="https://market.douban.com/people/orders/" class="active">
+    全部订单
+  </a>
+  <i>|</i>
+  <a href="https://market.douban.com/people/orders/?status=NOT_PAID&amp;biz_type=all" class="">
+    待付款
+  </a>
+  <i>|</i>
+  <a href="https://market.douban.com/people/orders/?status=NOT_SEND&amp;biz_type=all" class="">
+    待发货
+  </a>
+  <i>|</i>
+  <a href="https://market.douban.com/people/orders/?status=SEND&amp;biz_type=all" class="">
+    待收货
+  </a>
+  <i>|</i>
+  <a href="https://market.douban.com/people/refunds/" class="">
+    退款退货
+  </a>
+</div>
+
+    
+
+
+
+<div class="orders-filter">
+  <a class="orders-filter-item active" href="https://market.douban.com/people/orders/?status=ALL&amp;biz_type=all">
+    全部类型
+  </a>
+  <a class="orders-filter-item " href="https://market.douban.com/people/orders/?status=ALL&amp;biz_type=market">
+    豆品订单
+  </a>
+  <a class="orders-filter-item " href="https://market.douban.com/people/orders/?status=ALL&amp;biz_type=book">
+    纸书订单
+  </a>
+  <a class="orders-filter-item " href="https://market.douban.com/people/orders/?status=ALL&amp;biz_type=time">
+    时间实物订单
+  </a>
+  <a class="orders-filter-item " href="https://market.douban.com/people/orders/?status=ALL&amp;biz_type=movie">
+    电影周边订单
+  </a>
+</div>
+
+  </div>
+
+  <div class="market-wrapper">
+      <div class="order-empty">
+        <img src="./订单管理 - 个人中心_files/empty.png">
+        <p>这里什么也没有~</p>
+        <div class="buttons">
+          <a href="https://market.douban.com/" class="mui-button basic l">去逛逛吧</a>
+        </div>
+      </div>
+
+  </div>
+
+  
+
+  </div>
+  
+  
+<div id="footer">
+  <div class="footer-wrapper">
+    <div class="footer-left">
+      <span class="logo">
+        <i class="mui-icon logo"></i>
+      </span>
+      <div class="info">
+        <p>
+          © 2019 market.douban.com, all rights reserved <a href="https://img3.doubanio.com/view/treasury_image/raw/public/379b85beccce246.jpg" target="_blank">北京和光文创科技有限责任公司</a>
+        </p>
+        <p>
+          <a href="https://img3.doubanio.com/view/treasury_image/raw/public/db5f50563719203.jpg" target="_blank">食品经营许可证: JY11105111524423</a>
+          <a href="https://img1.doubanio.com/view/treasury_image/raw/public/c9802a515021fe9.jpg" target="_blank">出版物经营许可证：新出发京批字第直170330号</a>
+        </p>
+      </div>
+    </div>
+    <div class="footer-right">
+      <div class="footer-kits">
+        <a class="item" id="openMarketInfo">
+          <i class="mui-icon question-circle"></i>
+          <span>购物说明</span>
+        </a>
+        <a class="item" target="_blank" href="https://www.douban.com/doumail/write?to=119347429">
+          <i class="mui-icon pencil"></i>
+          <span>意见反馈</span>
+        </a>
+        <a class="item" id="openMarketContact">
+          <i class="mui-icon message"></i>
+          <span>商务合作</span>
+        </a>
+      </div>
+
+      <div class="footer-contacts">
+        <a class="footer-weibo" href="https://weibo.com/u/6348655664" target="_blank">
+          <i class="mui-icon weibo"></i>
+        </a>
+        <a class="footer-wechat">
+          <span class="footer-qr-code">
+            <img src="./订单管理 - 个人中心_files/qrcode.png" alt="">
+          </span>
+          <i class="mui-icon wechat"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+  
+  
+
+<script src="./订单管理 - 个人中心_files/polyfill.js.下载"></script>
+<script src="./订单管理 - 个人中心_files/vendors.js.下载"></script>
+<script src="./订单管理 - 个人中心_files/misc.js.下载"></script>
+<script type="text/javascript">
+  $.post_withck = function( url, data, callback, type ) {
+    if ($.isFunction(data)) {
+      type = callback;
+      callback = data;
+      data = {};
+    }
+    return $.ajax({
+      type: 'POST',
+      url: url,
+      data: $.extend(data,{ck: 'KKcH'}),
+      success: callback,
+      dataType: type || 'text'
+    });
+  };
+</script>
+<script type="text/javascript" src="./订单管理 - 个人中心_files/init.js.下载"></script>
+<script type="text/javascript">var RELEASE="6af5922ab47900eab22479d2afa61fa3269dbbef"</script>
+<script type="text/javascript">
+  var _maq = _maq || [];
+  window._maq = _maq;
+  (function() {
+    _maq.push(['setAccountId', 'bHNYP7AugseyFyQi']);
+    (function() {
+      var ma = document.createElement('script');
+      ma.type='text/javascript';
+      ma.async = true;
+      ma.src = "https://img3.doubanio.com/dae/athena/static/ma.v2.last.release.js?v=1550715965.08";
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(ma, s);
+    })();
+  })();
+</script>
+
+
+  
+  <script src="./订单管理 - 个人中心_files/orders.js.下载"></script>
+  <!-- <script src="https://img3.doubanio.com/f/market/136a2d9adbcc94697c04d5ec10edb694fbbef3df/dest/orders/trade-comment.js"></script> -->
+
+  <!-- COLLECTED JS -->
+  
+  <script>var _SPLITTEST = ""</script>
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+var _paq = _paq || [];
+_paq.push(['trackPageView']);
+_paq.push(['enableLinkTracking']);
+(function() {
+    var p=(('https:' == document.location.protocol) ? 'https' : 'http'), u=p+'://fundin.douban.com/';
+    _paq.push(['setTrackerUrl', u+'piwik']);
+    _paq.push(['setSiteId', '100001']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.type='text/javascript';
+    g.defer=true;
+    g.async=true;
+    g.src='https://img1.doubanio.com/dae/fundin/piwik.js';
+    s.parentNode.insertBefore(g,s);
+})();
+</script>
+
+<!-- Google Analytics -->
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//ga.doubanio.com/analytics.js','ga');
+
+if(window._USER_ID){
+  ga('create', 'UA-70828466-1', {'cookieDomain': 'market.douban.com', 'userId': _USER_ID});
+}
+else{
+  ga('create', 'UA-70828466-1', {'cookieDomain': 'market.douban.com'});
+}
+ga(function(tracker) {
+    // Modify sendHitTask to send request to ga_proxy.
+    tracker.set('sendHitTask', function(model) {
+      var xhr = new XMLHttpRequest();
+      var data = model.get('hitPayload');
+      if (data && data.length < 2048) {
+        xhr.open('GET', 'https://market.douban.com/ga_proxy?' + data, true);
+        xhr.send();
+      } else {
+        xhr.open('POST', 'https://market.douban.com/ga_proxy', true);
+        xhr.send(data);
+      }
+    });
+  });
+ga('set', '&uip', '106.117.84.207');
+ga('set', '&ua', 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.80 Safari/537.36');
+ga('require', 'ec');
+ga('send', 'pageview');
+
+</script>
+<!-- End Google Analytics -->
+
+<!-- Google Tag Manager -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PV5RZNF"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PV5RZNF');</script>
+<!-- End Google Tag Manager -->
+
+
+
+
+
+
+  <!-- anson81-docker -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="zhichiBtnBox" style="position: fixed; z-index: 2147483583; box-shadow: rgba(15, 66, 76, 0.25) 0px 0px 14px 0px; width: 60px; height: 60px; border-radius: 50%; background-color: rgb(115, 173, 115); background-image: url(&quot;//www.sobot.com/chat/frame/imgs/icon.png&quot;); background-repeat: no-repeat; background-position: 18px -58px; right: 40px; bottom: 20px; display: none;"><a hidefocus="" id="zhichiBtn" style="position:relative;text-decoration: none; outline: none; font-family: Microsoft Yahei, Arial, Helvetica; color: #fff; font-size: 16px; display: inline-block; margin: 0; padding: 0; border: none; line-height:43px; float:none;width:100%;height:100%;border-radius:50%;"><span class="zc-advice-icon-btn-title" style="box-shadow: rgba(107, 113, 114, 0.15) 0px 2px 4px 0px; border: 1px solid rgb(235, 239, 240); font-family: &quot;Microsoft Yahei&quot;, Arial, Helvetica; color: rgb(85, 85, 86); font-size: 13px; margin: 0px; text-align: right; background: rgb(255, 255, 255); position: absolute; top: 15px; right: 70px; text-overflow: ellipsis; white-space: nowrap; word-break: normal; display: none; border-radius: 3px; padding: 0px 5px; height: 30px; line-height: 30px;">咨询在线客服</span></a><i style="position:absolute;top:0px;right:0px;padding:1px;line-height:20px;text-align:center;color:#fff;font-weight:bold;height:18px;min-width:18px;background-color:#ed5c5c;border-radius:18px;font-size:12px;display:none;font-style:normal;" id="zhichiCount"></i></div></body></html>
