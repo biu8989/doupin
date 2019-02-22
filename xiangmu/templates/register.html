@@ -1,0 +1,149 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <title>Fullscreen Responsive Register Template</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- CSS -->
+    <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=PT+Sans:400,700'>
+    <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Oleo+Script:400,700'>
+    <link rel="stylesheet" href="/static/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/css/style.css">
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+            <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+
+</head>
+
+<body>
+
+<div class="header">
+    <div class="container">
+        <div class="row">
+            <div class="logo span4">
+                <h1><a href="">iApp Register <span class="red">.</span></a></h1>
+            </div>
+            <div class="links span8">
+                <a class="home" href="" rel="tooltip" data-placement="bottom" data-original-title="Home"></a>
+                <a class="blog" href="" rel="tooltip" data-placement="bottom" data-original-title="Blog"></a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="copyrights">Collect from <a href="http://www.cssmoban.com/" title="网站模板">网站模板</a></div>
+
+<div class="register-container container">
+    <div class="row">
+        <div class="iphone span5">
+            <img src="/static/images/iphone.png" alt="">
+        </div>
+        <div class="register span6">
+            <form action="" method="post">
+                <h2>豆瓣 <span class="red"><strong>APP</strong></span></h2>
+                <label >用户名</label>
+                <input type="text" id="username" name="username" placeholder="请输入用户名...">
+                <label>手机号</label>
+                <input type="text" id="phoneNo" name="phoneNo" placeholder="请输入手机号...">
+                <label >密码</label>
+                <input type="password" id="password" name="password" placeholder="请输入密码...">
+                <label>Email</label>
+                <input type="text" id="email" name="email" placeholder="请输入邮箱...">
+                <label>短信验证码</label>
+                <input type="text" name="yzm" id="yzm" style="width: 205px">
+                <input type="button" value="发送" id="btnyzm">
+                <input type="button" value="注 册" name="" id="btnregister">
+            </form>
+            <label id="msg"></label>
+        </div>
+    </div>
+</div>
+
+<!-- Javascript -->
+<script src="/static/js/jquery-1.12.4.min.js"></script>
+<script src="/static/bootstrap/js/bootstrap.min.js"></script>
+<script src="/static/js/jquery.backstretch.min.js"></script>
+<script src="{% static 'js/scripts.js' %}"></script>
+<script src="{% static 'js/register.js' %}"></script>
+<script src="{% static 'js/rsaen.js' %}"></script>
+<script src="{% static 'js/jquery.min.js' %}"></script>
+
+</body>
+<script>
+    $.ajaxSetup({
+        data: {csrfmiddlewaretoken: '{{ csrf_token }}'},
+    });
+</script>
+<script>
+    $(function () {
+        $('#btnregister').click(function () {
+            username = $('#username').val();
+            password = $('#password').val();
+            phoneNo = $('#phoneNo').val();
+            email = $('#email').val();
+            yzm = $('#yzm').val();
+            if (username == '') {
+                $('#msg').html('用户名不能为空');
+                return;
+            }
+            if (password == '') {
+                $('#msg').html('密码不能为空');
+                return;
+            }
+            if (phoneNo == '') {
+                $('#msg').html('手机号不能为空');
+                return;
+            }
+            if (email == '') {
+                $('#msg').html('邮箱不能为空');
+                return;
+            }
+            if (yzm == '') {
+                $('#msg').html('验证码不能为空');
+                return;
+            }
+            password = enrsa(password);
+            alert(password);
+
+            data = {
+                'username': username,
+                'password': password,
+                'phoneNo': phoneNo,
+                'email': email,
+                'yzm': yzm
+            };
+
+            $.post('', data=data, function (rs) {
+                if (rs.retCode == 1) {
+                    window.location.href = rs.retMsg
+                } else {
+                    $('#msg').html(rs.retMsg);
+                    return
+                }
+            });
+
+
+        });
+        $('#btnyzm').click(function () {
+                phoneNo = $('#phoneNo').val();
+                if (phoneNo==''){
+                    alert('手机号不能为空')
+                }
+                $.post('/user/yzm',{'phoneNo':phoneNo},function (rs) {
+                    if (rs.retCode==1) {
+                        alert('验证码已发送')
+                    }
+                })
+            })
+    })
+</script>
+
+</html>
+
